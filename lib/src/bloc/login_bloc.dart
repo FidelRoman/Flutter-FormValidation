@@ -1,6 +1,6 @@
 import 'dart:async';
 
-class LogicBloc {
+class LoginBloc {
 
   // broadcasta hace que se pueda escuchar por varias personas
   final _emailController = StreamController<String>.broadcast();
