@@ -96,5 +96,10 @@ class _ProductoPageState extends State<ProductoPage> {
     if ( !formKey.currentState.validate()) return ; 
     
     print('Todo OK!');
+
+
+
+
+    
   }
 }
