@@ -39,11 +39,12 @@ class ProductosProvider {
       final prodTemp = ProductoModel.fromJson(prod);
       prodTemp.id = id;
 
+      
       productos.add(prodTemp);
-      // print(productos[0].id);
-      return productos;
+
     });
 
-    return [];
+    // print( productos[0].id);
+    return productos;
   }
 }

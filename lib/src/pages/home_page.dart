@@ -29,7 +29,9 @@ class HomePage extends StatelessWidget {
       future: productosProvider.cargarProductos(),
       builder: (BuildContext context, AsyncSnapshot<List<ProductoModel>> snapshot) {
         if (snapshot.hasData) {
+          
           final productos = snapshot.data;
+          
           return ListView.builder(
             itemCount: productos.length,
             itemBuilder: (context , i) => _crearItem(context, productos[i]),            
