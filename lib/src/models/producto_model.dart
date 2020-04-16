@@ -32,7 +32,8 @@ class ProductoModel {
     );
     // Toma el modelo y lo convierte a un json
     Map<String, dynamic> toJson() => {
-        "id": id,
+        // Evitamos enviar el id:
+        //"id": id,
         "titulo": titulo,
         "valor": valor,
         "disponible": disponible,
