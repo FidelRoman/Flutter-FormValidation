@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
       future: productosProvider.cargarProductos(),
       builder: (BuildContext context, AsyncSnapshot<List<ProductoModel>> snapshot) {
         if (snapshot.hasData) {
-          
+
           final productos = snapshot.data;
           
           return ListView.builder(
@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
         color: Colors.red,
       ),
       onDismissed: (direction){
-        // TODO: Borrar producto
+        productosProvider.borrarProducto(producto.id);
       },
       child: ListTile(
         title: Text('${ producto.titulo } - ${ producto.valor }'),
