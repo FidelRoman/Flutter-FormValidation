@@ -175,13 +175,15 @@ class _ProductoPageState extends State<ProductoPage> {
       //TODO: tengo que hacer esto
       return Container();
     } else {
-      return Image(
-        
-        image: AssetImage( foto?.path ?? 'assets/no-image.png'),
-        height: 300.0,
-        fit: BoxFit.cover,
-      );
-      
+ 
+      if( foto != null ){
+        return Image.file(
+          foto,
+          fit: BoxFit.cover,
+          height: 300.0,
+        );
+      }
+      return Image.asset('assets/no-image.png');
     }
   }
 
