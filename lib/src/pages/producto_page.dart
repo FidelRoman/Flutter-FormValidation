@@ -172,8 +172,14 @@ class _ProductoPageState extends State<ProductoPage> {
 
   _mostrarFoto(){
     if ( producto.fotoUrl != null) {
-      //TODO: tengo que hacer esto
-      return Container();
+      
+      return FadeInImage(
+        image: NetworkImage(producto.fotoUrl),
+        placeholder: AssetImage('assets/jar-loading.gif'),
+        height: 300.0,
+        fit: BoxFit.cover,
+      );
+
     } else {
  
       if( foto != null ){
@@ -203,7 +209,8 @@ class _ProductoPageState extends State<ProductoPage> {
     );
 
     if ( foto!= null ) {
-      // limpieza
+      producto.fotoUrl = null;
+      // al hacer esto null, en la línea 185 carga la nueva foto 
     }
 
     setState(() {
