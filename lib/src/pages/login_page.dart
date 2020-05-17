@@ -52,7 +52,10 @@ class LoginPage extends StatelessWidget {
               _crearBoton(bloc),
             ],),
           ),
-          Text('¿Olvidó la contraseña?'),
+          FlatButton(
+            child: Text('Crear una nueva cuenta'),
+            onPressed: () => Navigator.pushReplacementNamed(context, 'registro'),
+          ),
           SizedBox(height: 100.0,)
         ],)
     );
